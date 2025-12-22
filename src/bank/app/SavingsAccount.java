@@ -1,19 +1,27 @@
 package bank.app;
 
-public class SavingsAccount {
+public class SavingsAccount extends AbstractBankAccount {
+  /**
+   * Stores name of account owner.
+   */
   private String ownerName;
-  
+  /**
+   * @return owner name.
+   */
   public String getOwnerName() {
     return ownerName;
   }
-
-  public void setOwnerName(String ownerName) {
-    this.ownerName = ownerName;
+  /**
+   * @param savingsOwnerName
+   */
+  public void setOwnerName(final String savingsOwnerName) {
+    this.ownerName = savingsOwnerName;
   }
-
-  public SavingsAccount(String ownerName) {
+  /**
+   * @param savingsOwnerName
+   */
+  public SavingsAccount(final String savingsOwnerName) {
     setOwnerName(ownerName);
+    System.out.println(getOwnerName());
   }
-  
-  
 }
