@@ -71,14 +71,14 @@ public abstract class AbstractBankAccount implements BankAccount {
   /**
    * Freezes the account.
    */
-  void freezeAcount() {
+  public void freezeAccount() {
     setFrozen(true);
     System.out.println("Account has been frozen.");
   }
   /**
    * Unfreezes the account.
    */
-  void unfreezeAccount() {
+  public void unfreezeAccount() {
     setFrozen(false);
     System.out.println("Account has been unfrozen.");
   }

@@ -21,7 +21,7 @@ public class SavingsAccount extends AbstractBankAccount {
    * @param savingsOwnerName
    */
   public SavingsAccount(final String savingsOwnerName) {
-    setOwnerName(ownerName);
+    setOwnerName(savingsOwnerName);
     System.out.println(getOwnerName());
   }
 }
