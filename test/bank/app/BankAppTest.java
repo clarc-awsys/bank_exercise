@@ -42,6 +42,12 @@ class BankAppTest {
   }
   
   @Test
+  void testDepositMethod_IfAmountIsValid_ReturnsDepositAmount() {
+    account.deposit(1000);
+    assertEquals("Deposited: PHP 1000.0", outContent.toString().trim());
+  }
+  
+  @Test
   void testFreezeAccountMethodAndDepositMethod_IfAccountIsFrozen_ReturnsErrorMessage() {
     account.freezeAccount();
     account.deposit(1281);
