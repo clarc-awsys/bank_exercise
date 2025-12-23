@@ -24,6 +24,7 @@ public final class Main {
     final int fiveHundred = 500;
     final int oneHundred = 100;
     final int elevenThousandFiveHundred = 11500;
+
     account.deposit(oneThousand); // Test Case #2
     account.deposit(0); // Test Case #3
     account.deposit(-fiveHundred); // Test Case #4

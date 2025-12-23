@@ -7,8 +7,15 @@ public abstract class AbstractBankAccount implements BankAccount {
   private double balance;
   /**
    * Account status variable.
+   * Code Review: Try to initialize isFrozen and balance using a Constructor
    */
-  private boolean isFrozen = false;
+  private boolean isFrozen;
+  /**
+   * AbstractBankAccount Constructor.
+   */
+  public AbstractBankAccount() { // Missing Constructor from specs sheet
+    setFrozen(false);
+  }
   /**
    * @return returns true or false.
    */
@@ -34,7 +41,7 @@ public abstract class AbstractBankAccount implements BankAccount {
    * @param amount
    */
   public void deposit(final double amount) {
-    if (isFrozen()) {
+    if (isFrozen()) { // Checkstyle error - no space between if and (
       System.out.println("Account has been frozen. Cannot Deposit");
       return;
     } else if (amount <= 0) {
@@ -49,7 +56,7 @@ public abstract class AbstractBankAccount implements BankAccount {
    * @param amount
    */
   public void withdraw(final double amount) {
-    if (isFrozen()) {
+    if (isFrozen()) { // Checkstyle error - no space between if and (
       System.out.println("Account has been frozen. Cannot Withdraw");
       return;
     } else if (amount > getBalance()) {
@@ -73,6 +80,7 @@ public abstract class AbstractBankAccount implements BankAccount {
    */
   public void freezeAccount() {
     setFrozen(true);
+    // Checkstyle error - space between println and (
     System.out.println("Account has been frozen.");
   }
   /**
@@ -80,6 +88,7 @@ public abstract class AbstractBankAccount implements BankAccount {
    */
   public void unfreezeAccount() {
     setFrozen(false);
+ // Checkstyle error - space between println and (
     System.out.println("Account has been unfrozen.");
   }
 }
