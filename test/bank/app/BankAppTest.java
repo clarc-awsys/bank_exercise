@@ -13,7 +13,7 @@ class BankAppTest {
   SavingsAccount account;
   @BeforeEach
   void setup() {
-    this.account = new SavingsAccount("Khan Santos"); // resets the object
+    this.account = new SavingsAccount("Khan Santos"); // Instantiates new object -- acts like a reset
     outContent.reset();
     System.setOut(new PrintStream(outContent));
   }
